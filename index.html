@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>MouseTrack Test</title>
+
+<style type="text/css">
+
+
+</style>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="mousetrack.jquery.js"></script>
+
+<script>
+
+var mt;
+
+$(document).ready(function() {
+    
+    $(document).on("mousemove", function(e) {
+        
+        $("#info").html("Screen: " + e.screenX + "x " + e.screenY + "y<br>Offset: " + e.pageX + "x " + e.pageY + "y");
+    
+    });
+    
+    mt = $().MouseTracker();
+    
+});
+
+</script>
+
+
+</head>
+
+<body>
+
+<div id="info">
+
+</div>
+
+<button onclick="mt.track()">Start</button>&nbsp;
+<button onclick="mt.reset()">Reset</button>&nbsp;
+<button onclick="mt.stop()">Stop</button>
+
+</body>
+
+</html>
