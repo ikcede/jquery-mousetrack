@@ -96,6 +96,7 @@
             reset: function() {
                 this.data = [];
                 this.time = 0;
+                this.prev = 0;
             }
         };    
     
